@@ -32,3 +32,8 @@ a:active { text-decoration: none; }
     visibility: hidden;
 }
 
+.col-4{
+    display: inline-block;
+    width: 32%;
+}
+

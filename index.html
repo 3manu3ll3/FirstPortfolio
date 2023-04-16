@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="style\projects.css">
     <link rel="stylesheet" href="style\form.css">
     <link rel="stylesheet" href="style\footer.css">
+    <link rel="stylesheet" href="style\carousel.css">
+    <script src="https://kit.fontawesome.com/1db60168e0.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Portfólio - Gabriel Dev</title>
     <meta name="author" content="Gabriel Barros de Almeida">
@@ -31,10 +33,10 @@
               <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/">COURSERS</a></li>
-                <li><a href="/">PROJECTS</a></li>
-                <li><a href="/">CONTACT</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#courses">COURSERS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -143,6 +145,18 @@
                 </div>
             </div>
         </div>
+        <div id="carousel">
+          <div class="carousel">
+            <div class="carousel-container">
+              <div class="carousel-item"><i class="fa fa-home"></i></div>
+              <div class="carousel-item"><i class="fa fa-envelope"></i></div>
+              <div class="carousel-item"><i class="fa fa-phone"></i></div>
+              <div class="carousel-item"><i class="fa fa-user"></i></div>
+              <div class="carousel-item"><i class="fa fa-cog"></i></div>
+              <div class="carousel-item"><i class="fa fa-shopping-cart"></i></div>
+            </div>
+          </div>          
+        </div>
         <div id="contact">
           <div class="fcf-body">
 
@@ -180,19 +194,28 @@
           </div>
         </div>
       </div>
-      
     </article>
     <footer>
-      <div class="social-media">
+      <div class="social-media col-4">
         <a href="https://www.linkedin.com/in/gabriel-barros-de-almeida-908911208/"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/Yesod-star"><i class="fab fa-github"></i></a>
+        <a href="mailto:gabrielalmeidasici@gmail.com?subject=Contact Dev"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </div>
-      <div class="creator">
-        <p>Created by Gabriel Barros</p>
+      <div class="creator col-4">
+        <p>Created by: Gabriel Barros</p>
+      </div>
+      <div class="col-4">
+        <p>©2023 Gabrieldev. All rights reserved.</p>
       </div>
     </footer>
+    <a href="https://api.whatsapp.com/send?phone=5528999881802"
+    target="_blank"
+    id="whatsappLink">
+      <img class="whatsapp" src="media/img/whatsapp.png" alt="Contato pelo WhatsApp" />
+    </a>
 </body>
 <script src="js\main.js"></script>
 <script src="js\mobile-navbar.js"></script>
 <script src="js\script.js"></script>
+<script src="js\carousel.js"></script>
 </html>
