@@ -20,10 +20,10 @@ Features:
 Installation
 To run this project locally, you can clone the repository using the following command:
 
-bash
-Copy code
-git clone https://github.com/gabrielbarrosdev/portfolio.git
+Copy the following code:<br>
+Git clone https://github.com/gabrielbarrosdev/portfolio.git<br>
 Then, open the index.html file in your web browser.
+
 
 Usage
 Feel free to browse the live site to learn more about me and my work. You can also fork this repository and use it as a template for your own portfolio.
