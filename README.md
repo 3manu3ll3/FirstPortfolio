@@ -2,16 +2,20 @@
 This is the repository for my personal web portfolio. You can view the live site at https://gabrielbarrosdev.com/.
 
 Technologies Used
-HTML
-CSS
-JavaScript
-FontAwesome
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>FontAwesome</li>
+</ul>
+Features:
 
-Features
-Responsive design that works well on desktop, tablet, and mobile screens.
-A home area that introduces me and my skills.
-A projects area that showcases some of my recent work.
-A contact form that allows visitors to send me a message.
+<ul>
+  <li>Responsive design that works well on desktop, tablet, and mobile screens.</li>
+  <li>A home area that introduces me and my skills.</li>
+  <li>A projects area that showcases some of my recent work.</li>
+  <li>A contact form that allows visitors to send me a message.</li>
+</ul>
 
 Installation
 To run this project locally, you can clone the repository using the following command:
