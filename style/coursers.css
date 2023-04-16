@@ -1,0 +1,40 @@
+/*#region Courses*/
+#courses{
+    background-color: #101820FF;
+    border-bottom: 2px solid black;
+    color: #FAFAFA;
+    padding: 5vw 2.5vh;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+.column img {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 25%;
+    border: 2px solid #FEE715FF;
+    width: 50%;
+}
+
+.column h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.column p {
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: center;
+}
+/*#region Courses*/

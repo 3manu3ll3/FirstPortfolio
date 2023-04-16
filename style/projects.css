@@ -1,0 +1,40 @@
+/*#region Projects*/
+#projects{
+    background-color: rgb(119, 109, 14);
+    border-bottom: 2px solid #000;
+    color: #000;
+    padding: 5vw 2.5vh;
+}
+#projects .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#projects .column {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+#projects .column img {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 25%;
+    border: 2px solid #000;
+    width: 50%;
+}
+
+#projects .column h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#projects .column p {
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: center;
+}
+/*#region Projects*/
