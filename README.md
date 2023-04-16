@@ -1,4 +1,4 @@
-Gabriel Barros de Almeida's Portfolio
+<h1>Gabriel Barros de Almeida's Portfolio</h1>
 This is the repository for my personal web portfolio. You can view the live site at https://gabrielbarrosdev.com/.
 
 Technologies Used
