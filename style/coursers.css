@@ -37,4 +37,16 @@
     margin-bottom: 0;
     text-align: center;
 }
+.card{
+    padding: 10% 5%;
+    margin: 5%;
+    background-color: green;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex-basis: calc(100% - 10px);
+        margin-bottom: 20px;
+    }
+}
 /*#region Courses*/
