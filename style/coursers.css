@@ -1,9 +1,20 @@
 /*#region Courses*/
 #courses{
-    background-color: #101820FF;
-    border-bottom: 2px solid black;
+    overflow: hidden;
+    background: #000;
+    animation: gradient 20s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    border-bottom: 2px solid #FEE715FF;
     color: #FAFAFA;
-    padding: 5vw 2.5vh;
+    position: relative;
+    padding: 0 5%;
+    z-index: 0;
+    height: auto;
+}
+#coursers h3{
+    padding-top: 2em;
+    font-size: 32px;
 }
 .container {
     display: flex;
@@ -40,13 +51,60 @@
 .card{
     padding: 10% 5%;
     margin: 5%;
-    background-color: green;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
 }
 
 @media screen and (max-width: 600px) {
     .column {
         flex-basis: calc(100% - 10px);
         margin-bottom: 20px;
+    }
+}
+
+.wave-reverse {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: absolute;
+    width: 200%;
+    height: 12em;
+    animation: wave-reverse  15s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    rotate: 180deg;
+}
+.wave-reverse:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave-reverse  18s linear reverse infinite;
+    opacity: 0.8;
+}
+.wave-reverse:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave-reverse  20s -1s reverse infinite;
+    opacity: 0.9;
+}
+@keyframes wave-reverse {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
     }
 }
 /*#region Courses*/
