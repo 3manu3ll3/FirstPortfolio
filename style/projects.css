@@ -49,4 +49,8 @@
     margin-bottom: 0;
     text-align: center;
 }
+#projects .text{
+    color: #888;
+    text-shadow: 1px 1px 1px black;
+}
 /*#region Projects*/

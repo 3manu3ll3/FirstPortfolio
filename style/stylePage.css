@@ -36,3 +36,52 @@ a:active { text-decoration: none; }
     display: inline-block;
     width: 32%;
 }
+.text {
+	font-family: "Yanone Kaffeesatz";
+	font-size: 5em;
+	display: flex;
+	user-select: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.text .wrapper {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.3em;
+}
+
+.text .wrapper .letter{
+    transition: ease-out 1s;
+    transform: translateY(40%);
+}
+.text .wrapper .shadow {
+    transform: scale(1, -1);
+    color: #999;
+    transition: ease-in 5s, ease-out 5s;
+}
+
+.text .wrapper:hover .letter {
+    transform: translateY(-200%);
+}
+.text .wrapper:hover .shadow {
+    opacity: 0;
+    transform: translateY(200%);
+}
+@media (max-width: 600px) {
+    .text {
+        font-size: 2em !important;
+    }
+    .text .wrapper {
+        padding: 0.1em;
+    }
+}
+
+@media (max-width: 999px) and (min-width: 600px) {
+    .text {
+        font-size: 2.5em !important;
+    }
+    .text .wrapper {
+        padding: 0.2em;
+    }
+}

@@ -9,12 +9,12 @@
     display:block;
 }
 
-.fcf-h3{
-    font-weight: bold;
-    text-align: center;
+#fcf-form .text{
     font-size: 2em;
 }
-
+#fcf-form .text-submit{
+    font-size: 1.5em;
+}
 .fcf-body {
     margin: 0 auto;
     font-size: 1rem;
@@ -142,7 +142,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 @media (max-width: 999px) {
     #contact{
         background-position: center;
-        margin: 2vw;
+        padding: 2vw;
     }
     .fcf-body{
         width: inherit;
@@ -150,5 +150,8 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
     .button-submit {
         font-size: 24px;
         min-width: 196px;
+    }
+    #fcf-form .text-submit{
+        font-size: 1em;
     }
 }
