@@ -36,10 +36,6 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 
-.area-1,.area-2,.area-3,.area-4{
-    visibility: hidden;
-}
-
 .col-4{
     display: inline-block;
     width: 32%;
