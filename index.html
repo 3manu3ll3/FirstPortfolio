@@ -278,34 +278,33 @@
               <div class="shadow">L</div>
             </div>
           </div>        
-          <form id="fcf-form-id" class="fcf-form-class area-4" method="post" action="contact-form-process.php">
-              
-              <div class="fcf-form-group">
-                  <label for="Name" class="fcf-label">Your name:</label>
-                  <div class="fcf-input-group">
-                      <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                  </div>
-              </div>
-      
-              <div class="fcf-form-group">
-                  <label for="Email" class="fcf-label">Your email address:</label>
-                  <div class="fcf-input-group">
-                      <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                  </div>
-              </div>
-      
-              <div class="fcf-form-group">
-                  <label for="Message" class="fcf-label">Your message:</label>
-                  <div class="fcf-input-group">
-                      <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-                  </div>
-              </div>
-      
-              <div class="fcf-form-group">
-                  <button type="submit" id="fcf-button" class="button-submit"><span class="text-submit">SUBMIT</span></button>
-              </div>
-      
-          </form>
+          <form id="fcf-form-id">
+            <div class="fcf-form-group">
+                <label for="from_name" class="fcf-label">Your name:</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="from_name" name="from_name" class="fcf-form-control" required>
+                </div>
+            </div>
+        
+            <div class="fcf-form-group">
+                <label for="to_name" class="fcf-label">Your's email:</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="to_name" name="to_name" class="fcf-form-control" required>
+                </div>
+            </div>
+        
+            <div class="fcf-form-group">
+                <label for="message" class="fcf-label">Your message:</label>
+                <div class="fcf-input-group">
+                    <textarea id="message" name="message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
+            </div>
+        
+            <div class="fcf-form-group">
+                <button type="submit" id="fcf-button" class="button-submit"><span class="text-submit">SUBMIT</span></button>
+            </div>
+        </form>
+        
           </div>
         </div>
       </div>
@@ -332,4 +331,21 @@
 <script src="js\main.js"></script>
 <script src="js\mobile-navbar.js"></script>
 <script src="js\script.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("ndeBfkhxNIPAxYoQS"); // Replace with your EmailJS user ID
+    })();
+
+  document.getElementById('fcf-form-id').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting the traditional way
+
+      emailjs.sendForm('service_5svo1wn', 'template_l85wql8', this)
+          .then(function(response) {
+              alert('Email sent successfully!');
+          }, function(error) {
+              alert('Failed to send email. Please try again later.');
+          });
+  });
+</script>
 </html>
