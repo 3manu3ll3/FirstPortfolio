@@ -121,6 +121,10 @@ letter-spacing: 2px;
 cursor: pointer;
 }
 
+.btn a{
+    color: #FAFAFA !important;
+}
+
 .btn + .btn {
 margin-left: 10px;
 }
@@ -144,6 +148,22 @@ transition: all .3s ease;
     .column {
         flex-basis: calc(100% - 10px);
         margin-bottom: 20px;
+    }
+
+    .wrapper h1{
+        font-size: 1em;
+    }
+
+    .wrapper p{
+        font-size: 0.5em;
+    }
+
+    .wrapper .btn{
+        font-size: 0.5em;
+    }
+
+    .banner-image, .banner-image-2, .banner-image-3{
+        height: 150px;
     }
 }
 

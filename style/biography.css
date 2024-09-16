@@ -8,7 +8,8 @@
 }
 #biography .visual p{
     text-align: left;
-    font-size: 1em;
+    font-size: 1.5em;
+    text-align: justify;
 }
 
 #biography img{
@@ -28,5 +29,8 @@
     }
     #biography .visual{
         padding-bottom: 10%;
+    }
+    #biography .visual p span{
+        display: none;
     }
 }
