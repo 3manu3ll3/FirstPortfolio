@@ -1,11 +1,8 @@
-/* Black (#101820FF) and Blazing Yellow (#FEE715FF)*/
 
-/* Fonts */
 @font-face {
     font-family: "valor";
     src: url("font/Valorant.ttf") format("truetype");
 }
-/*Geral*/
 body { 
     background-color: #101820FF;
     margin-top: 10vh;
