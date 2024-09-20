@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="style/footer.css">
     <script src="https://kit.fontawesome.com/1db60168e0.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src data:; connect-src 'self';">
+    
+    <!-- Updated CSP allowing images, fonts, and inline styles -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; script-src 'self';">
+    
     <title>Portfólio - Gabriel Dev</title>
     <meta name="author" content="Gabriel Barros de Almeida">
     <meta name="description" content="Portfolio - Barros Dev">
@@ -27,60 +30,66 @@
     <article id="article"></article>
     <div id="footer"></div>
     <a href="https://api.whatsapp.com/send?phone=5528999881802" target="_blank" id="whatsappLink">
-        <img class="whatsapp" src="media/img/whatsapp.png" alt="Contato pelo WhatsApp" />
+        <img class="whatsapp" src="/media/img/whatsapp.png" alt="Contato pelo WhatsApp" />
     </a>
 
     <script>
-        // Load Header
-        fetch('./includes/header.html')
-            .then(res => res.text())
-            .then(html => {
-                const headerElement = document.getElementById("header");
-                if (headerElement) {
-                    headerElement.innerHTML = html;
-                }
-            })
-            .catch(error => console.error("Error loading header:", error));
+        // Wait for DOM content to be loaded before fetching components
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load Header
+            fetch('./includes/header.html')
+                .then(res => res.text())
+                .then(html => {
+                    const headerElement = document.getElementById("header");
+                    if (headerElement) {
+                        headerElement.innerHTML = html;
+                    }
+                })
+                .catch(error => console.error("Error loading header:", error));
 
-        // Load Footer
-        fetch('./includes/footer.html')
-            .then(res => res.text())
-            .then(html => {
-                const footerElement = document.getElementById("footer");
-                if (footerElement) {
-                    footerElement.innerHTML = html;
-                }
-            })
-            .catch(error => console.error("Error loading footer:", error));
+            // Load Footer
+            fetch('./includes/footer.html')
+                .then(res => res.text())
+                .then(html => {
+                    const footerElement = document.getElementById("footer");
+                    if (footerElement) {
+                        footerElement.innerHTML = html;
+                    }
+                })
+                .catch(error => console.error("Error loading footer:", error));
 
-        // Load Article
-        fetch('./includes/article.html')
-            .then(res => res.text())
-            .then(html => {
-                const articleElement = document.getElementById("article");
-                if (articleElement) {
-                    articleElement.innerHTML = html;
-                }
-            })
-            .catch(error => console.error("Error loading article:", error));
+            // Load Article
+            fetch('./includes/article.html')
+                .then(res => res.text())
+                .then(html => {
+                    const articleElement = document.getElementById("article");
+                    if (articleElement) {
+                        articleElement.innerHTML = html;
+                    }
+                })
+                .catch(error => console.error("Error loading article:", error));
+        });
     </script>
 
     <script>
-        // Ensure form exists before adding event listener
-        const formElement = document.getElementById('fcf-form-id');
-        if (formElement) {
-            formElement.addEventListener('submit', function(event) {
-                event.preventDefault();
-                emailjs.sendForm('service_5svo1wn', 'template_l85wql8', this)
-                    .then(function(response) {
-                        alert('Email sent successfully!');
-                    }, function(error) {
-                        alert('Failed to send email. Please try again later.');
-                    });
-            });
-        }
+        // Ensure form exists before adding event listener for email form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const formElement = document.getElementById('fcf-form-id');
+            if (formElement) {
+                formElement.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    emailjs.sendForm('service_5svo1wn', 'template_l85wql8', this)
+                        .then(function(response) {
+                            alert('Email sent successfully!');
+                        }, function(error) {
+                            alert('Failed to send email. Please try again later.');
+                        });
+                });
+            }
+        });
     </script>
 
+    <!-- External JS files -->
     <script src="js/main.js"></script>
     <script src="js/mobile-navbar.js"></script>
     <script src="js/script.js"></script>
