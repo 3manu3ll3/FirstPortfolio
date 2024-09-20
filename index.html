@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Updated CSS links -->
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/stylePage.css">
     <link rel="stylesheet" href="style/object.css">
@@ -13,11 +15,19 @@
     <link rel="stylesheet" href="style/biography.css">
     <link rel="stylesheet" href="style/form.css">
     <link rel="stylesheet" href="style/footer.css">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/1db60168e0.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    
-    <!-- Updated CSP allowing images, fonts, and inline styles -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; script-src 'self';">
+
+    <!-- Updated CSP allowing inline styles, external fonts, and scripts -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self'; 
+      script-src 'self' https://kit.fontawesome.com 'nonce-ABC123'; 
+      style-src 'self' 'unsafe-inline'; 
+      font-src 'self' https://fonts.googleapis.com; 
+      img-src 'self' data:; 
+      connect-src 'self';
+    ">
     
     <title>Portfólio - Gabriel Dev</title>
     <meta name="author" content="Gabriel Barros de Almeida">
@@ -33,7 +43,12 @@
         <img class="whatsapp" src="/media/img/whatsapp.png" alt="Contato pelo WhatsApp" />
     </a>
 
-    <script>
+    <!-- External JavaScript files -->
+    <script src="js/main.js" nonce="ABC123"></script>
+    <script src="js/mobile-navbar.js" nonce="ABC123"></script>
+    <script src="js/script.js" nonce="ABC123"></script>
+
+    <script nonce="ABC123">
         // Wait for DOM content to be loaded before fetching components
         document.addEventListener('DOMContentLoaded', function() {
             // Load Header
@@ -71,7 +86,7 @@
         });
     </script>
 
-    <script>
+    <script nonce="ABC123">
         // Ensure form exists before adding event listener for email form submission
         document.addEventListener('DOMContentLoaded', function() {
             const formElement = document.getElementById('fcf-form-id');
@@ -88,10 +103,5 @@
             }
         });
     </script>
-
-    <!-- External JS files -->
-    <script src="js/main.js"></script>
-    <script src="js/mobile-navbar.js"></script>
-    <script src="js/script.js"></script>
 </body>
 </html>
