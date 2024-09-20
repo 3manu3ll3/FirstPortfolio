@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style/footer.css">
     <script src="https://kit.fontawesome.com/1db60168e0.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src data:; connect-src 'self';">
     <title>Portfólio - Gabriel Dev</title>
     <meta name="author" content="Gabriel Barros de Almeida">
     <meta name="description" content="Portfolio - Barros Dev">
@@ -29,7 +30,6 @@
         <img class="whatsapp" src="media/img/whatsapp.png" alt="Contato pelo WhatsApp" />
     </a>
 
-    <!-- Script for loading header, footer, and other content dynamically -->
     <script>
         // Load Header
         fetch('./includes/header.html')
@@ -39,7 +39,8 @@
                 if (headerElement) {
                     headerElement.innerHTML = html;
                 }
-            }).catch(error => console.log("Error loading header:", error));
+            })
+            .catch(error => console.error("Error loading header:", error));
 
         // Load Footer
         fetch('./includes/footer.html')
@@ -49,7 +50,8 @@
                 if (footerElement) {
                     footerElement.innerHTML = html;
                 }
-            }).catch(error => console.log("Error loading footer:", error));
+            })
+            .catch(error => console.error("Error loading footer:", error));
 
         // Load Article
         fetch('./includes/article.html')
@@ -59,16 +61,12 @@
                 if (articleElement) {
                     articleElement.innerHTML = html;
                 }
-            }).catch(error => console.log("Error loading article:", error));
+            })
+            .catch(error => console.error("Error loading article:", error));
     </script>
 
-    <!-- Script for handling email form submission -->
     <script>
-        (function() {
-            emailjs.init("ndeBfkhxNIPAxYoQS");
-        })();
-
-        // Ensure the form exists before adding the event listener
+        // Ensure form exists before adding event listener
         const formElement = document.getElementById('fcf-form-id');
         if (formElement) {
             formElement.addEventListener('submit', function(event) {
@@ -83,11 +81,8 @@
         }
     </script>
 
-    <!-- Other JavaScript files -->
     <script src="js/main.js"></script>
     <script src="js/mobile-navbar.js"></script>
     <script src="js/script.js"></script>
-
-    <!-- Ensure the external font (Valorant.ttf) is available or check the path -->
 </body>
 </html>
