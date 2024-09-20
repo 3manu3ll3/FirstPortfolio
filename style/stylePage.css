@@ -1,8 +1,5 @@
 
-@font-face {
-    font-family: "valor";
-    src: url("font/Valorant.ttf") format("truetype");
-}
+
 body { 
     background-color: #101820FF;
     margin-top: 10vh;
