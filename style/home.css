@@ -1,6 +1,6 @@
 #home{
     overflow: hidden;
-    background: #000;
+    background: #afc5c5;
     animation: gradient 20s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
@@ -25,7 +25,7 @@
 }
 .devFace{
     border-radius: 50%;
-    border: 2px solid rgb(116, 10, 116);
+    border: 2px solid rgb(92, 85, 92);
 }
 .container {
     display: flex;

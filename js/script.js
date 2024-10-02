@@ -13,7 +13,7 @@ titleHeader.onmouseover = event =>{
             return letters[Math.floor(Math.random()*26)]
         })
         .join("");
-        if(iterations >= 10) clearInterval(interval);
+        if(iterations >= 15) clearInterval(interval);
 
         iterations += 1/2;
     },50);
